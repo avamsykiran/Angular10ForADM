@@ -1,0 +1,141 @@
+Environental Setup
+------------------------------
+
+        NODE JS
+        Visual Code
+        
+
+Angular
+-----------------------------------
+
+        is a javascript SPA framework 
+
+        Angular 1               angularJS
+
+        Angular 2               angular             typescript
+
+        Angular 11
+
+
+        Typescript  =  Javascript  +  typesafty.
+
+                var f1 = (a,b) => {
+                    ...................
+                }
+
+                var f1 = (a:number,b:number):number => {
+                    ...................
+                }
+
+        Node JS
+        ---------------------------------------------------------
+
+                    Javascript execution / runtiem environment.
+
+
+                Development Platform
+
+                        Javascript Project 
+                                + Angular Library
+                                + Testing Libraires 
+                                            Karma
+                                            Protractor
+                                            Jasmine
+                                + Workflow automation libraries 
+                                            Babbel          ts to js transpolation
+                                            Grunt and Gulp
+                                            Minification tools
+                                            Watcher
+                                            Angular Live Development Server
+                                + Building Libraries 
+                                            npm              node package manager
+
+                
+        Node  npm
+        -----------------------
+
+                Create a project
+                        md node-proj01
+                        cd node-proj01
+                        npm init
+                        npm install library-name --save
+        
+        Angular CLI
+        ---------[Command Line Interface]---
+
+                ng --version
+
+                ng new project-name        //creating a new project
+
+                
+        Angular Archetecture
+        -------------------------------------------------------
+
+                Module     
+                        is a logical collection of
+                        Directives,Components,Services,Pipes and other modules.
+
+                        is a typescript class marked with a decorator @NgModule
+
+                        the parameters passed as JSON to a decorator is called metadata
+
+                        @NgModule({
+                           declarations:[
+                                   list of Components,
+                                   list of Pipes,
+                                   list of Directives...
+                           ],
+                           imports:[
+                                   list of sub-modules,
+                           ],
+                           providers:[
+                                   list of services
+                           ]     
+                        })
+                        class MyModule{
+                        }
+
+                        Every angular project must contain one and only root module.
+                        Inside the root module we can include any number of 
+                        sub-modules called feature-modules
+                
+                Component
+                
+                        Angular gives extandability to HTML.
+
+                        Which means , using angular we
+                        can create our own elements(tag) and attributes
+
+                        A Component is nothing but a new HTML element.
+
+                        Component = Controller + Template
+
+                                Template distacts how the components is rendred on the page
+                                Controller dictates the behaviour or event handling of the Component
+
+                        A Component is a typescript class marked with @Component decorator
+
+                        @Component({
+
+                        })
+                        class MessageBoxComponent{
+
+                        }
+
+                        
+                Directive                
+                Pipe
+                Service
+
+
+
+
+                
+
+
+
+        
+
+
+
+
