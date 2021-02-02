@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-proj01';
+  welcomeText:string;
+
+  constructor(){
+    this.welcomeText="Hai All! Welcoem to Angular";
+  }
+
+  showMessage(){
+    alert(this.welcomeText);
+  }
 }
