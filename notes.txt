@@ -116,17 +116,100 @@ Angular
                         A Component is a typescript class marked with @Component decorator
 
                         @Component({
-
+                           selector:'msg-box',
+                           template:'<h2>{{msgText}}</h2>'
                         })
                         class MessageBoxComponent{
-
+                           msgText:string;
+                           constructor(){
+                                   this.msgText="Hello";
+                           }
                         }
 
-                        
-                Directive                
-                Pipe
-                Service
+                        <body>
+                           <msg-box></msg-box>
+                        </body>
 
+                        <body>
+                           <h2>Hello</h2>
+                        </body>
+
+                Directive      
+                        
+                        Component Directives
+                                is nothing but components is to create
+                                custom html tags (elements)
+
+                        Attribute Directives
+                                is to create a custom attribute
+
+                                in-built Attribute Directives (offerd by angular core library)
+                                        
+                                        structural attribute Directives
+                                                ngIf
+                                                ngSwitch
+                                                ngFor
+
+                                        Style attribute Directives
+                                                style
+                                                class
+                                                attrib
+
+                                        router attribute Directives
+                                        event attribute directives .....
+
+                                User defiend Attribute Directives
+
+                                @Directive({
+                                        ...............
+                                })
+                                class MyDirective{
+                                        ...............
+                                }
+
+                Pipe
+                                is a an angular class,
+                                that is sued to tranform a given input
+                                into a different format .
+
+                                let d = new Date();
+                                let s = "vamsy";
+
+                                <p>{{d}}</p>
+                                <p>{{s}}</p>
+
+                                <p>{{d|date:'dd-MMM-yyyy'}}</p>
+                                <p>{{s|uppercase}}</p>
+                                <p>{{s|lowercase}}</p>
+
+
+                                in-built pipes
+
+                                        lowercase
+                                        uppercase
+                                        date
+                                        number
+                                        currency
+                                        json
+
+                                user defined pipes
+                                        @Pipe({
+
+                                        })
+                                        class MyPipe{
+
+                                        }
+                Service
+                                is any clsss that holds bussiness logic.
+
+                                @Injectable({
+
+                                })
+                                class EmployeeService{
+                                
+                                        validationLogic....
+                                        serverCommunicationRelatedLogic...
+                                }
 
 
 
