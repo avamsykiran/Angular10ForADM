@@ -1,2 +1,24 @@
-<h2>{{welcomeText}}</h2>
-<button (click)="showMessage()">Click Me</button>
+<header>
+    <div [class]="{bgRed:c1,brd:c2,pd:c3}">
+        <img [src]="logo" [style.width.px]="imgWidth"/>
+    </div>
+    <h2>{{banner}}</h2>
+    <div>
+        <input type="text" [(ngModel)]="banner" />
+        <button (click)="doOnClick()">Test Button</button>
+    </div>
+</header>
+
+<div>    
+    <input type="range" [(ngModel)]="imgWidth" min="50" max="500"/>
+    <label>
+        <input type="checkbox" [(ngModel)]="c1" />Background
+    </label>
+    <label>
+        <input type="checkbox" [(ngModel)]="c2" />Border
+    </label>
+    <label>
+        <input type="checkbox" [(ngModel)]="c3" />Padding
+    </label>
+
+</div>

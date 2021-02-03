@@ -1,0 +1,28 @@
+<section>
+
+    <h3>Loan Form</h3>
+
+    <form (ngSubmit)="compute()">
+        <div>
+            <label>Amount </label>
+            <input type="number" name="amt" [(ngModel)]="loan.amount" />
+        </div>
+        <div>
+            <label>Time Period </label>
+            <input type="number" name="prd" [(ngModel)]="loan.period" />
+        </div>
+        <div>
+            <label>Rate Of Interest </label>
+            <input type="decimal" min="0" max="100" name="rate" [(ngModel)]="loan.rateOfInterest" />
+        </div>
+        <div>
+            <button>Compute Interest</button>
+        </div>
+    </form>
+    <div>
+        <p>
+            <strong>You need to pay {{loan.amountPayable}} 
+                including interest {{loan.simpleInterest}}.</strong>
+        </p>
+    </div>
+</section>

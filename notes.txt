@@ -4,7 +4,6 @@ Environental Setup
         NODE JS
         Visual Code
         
-
 Angular
 -----------------------------------
 
@@ -182,7 +181,6 @@ Angular
                                 <p>{{s|uppercase}}</p>
                                 <p>{{s|lowercase}}</p>
 
-
                                 in-built pipes
 
                                         lowercase
@@ -211,9 +209,76 @@ Angular
                                         serverCommunicationRelatedLogic...
                                 }
 
+        Data Binding
+        ------------------------------------------------
+
+                Interpolation
+
+                        {{angular-expression}}
+
+                One-Way Attribute Binding
+
+                        [attribute]="angular-expression"
+
+                Two-Way Attribute Binding
+
+                        [(attribute)]="angular-expression"
+
+                        ngModal         FormsModule
+
+                Event Binding
+
+                        (eventAttribute)="angularFunction()"
+
+                angularEventAttribute = htmlEvetnAttribute - "on"
+
+                onClick         click
+                onBlur          blur
+                onDblClick      dblClick
+                ........................
+
+                onSubmit        ngSubmit
+
+                Style Binding
+
+                [attr.htmlAttributeName]=""
+
+                [style.cssProperty]=""
+
+                [class]="{class1:true,class2:true}"
 
 
                 
+Angular CLI
+---------[Command Line Interface]---
+
+                ng --version
+
+                ng new project-name        //creating a new project
+
+                ng build                  //building and bundling the project
+
+                npm start                 //ng serve --port 4200      
+
+                ng serve --port 4545 -o   //angular project starts
+
+
+                //Generating different angular blocks
+
+                g --- generate
+                                                
+                ng g component ComponentName
+                ng g modue ModuleName      
+                ng g directive DirectiveName
+                ng g service ServiceName
+                ng g pipe PipeName
+                ng g class ClassName
+                ng g interface InterfaceName
+                ng g guard GuardName
+
+                
+
+
 
 
 
