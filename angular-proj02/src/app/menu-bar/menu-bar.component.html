@@ -1,0 +1,10 @@
+<nav class="navbar bg-dark navbar-dark navbar-expand-sm">
+
+    <a href="#" class="navbar brand">MyAngularAPP</a>
+
+    <ul class="navbar-nav">
+        <li class="nav-item" *ngFor="let link of links">
+            <a [routerLink]="link[0]" class="nav-link">{{link[1]}}</a>
+        </li>        
+    </ul>
+</nav>
