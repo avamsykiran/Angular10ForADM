@@ -276,7 +276,34 @@ Angular CLI
                 ng g interface InterfaceName
                 ng g guard GuardName
 
-                
+Routing
+-------------------------------------------------
+
+based on the url,
+     we can control which component must render.
+
+RouterModule
+
+        Routes
+
+                is an array of Route Objects
+
+                Route
+                        path
+                        component
+                        pathMatch
+                        redirectTo
+                        children
+                        canActive
+                        canChildActive .....
+
+
+        RouterOutleyComponent    <router-outlet></router-outlet>
+
+        routerLink     is an attribute directive
+                        to be used with <a /> tags
+
+        
 
 
 
