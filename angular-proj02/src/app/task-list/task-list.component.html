@@ -8,7 +8,8 @@
     </div>
 
     <div class="card-columns">
-        <app-task *ngFor="let t of tasks" [taskDetails]="t">            
+        <app-task *ngFor="let t of tasks" 
+            [taskDetails]="t" (toggleStatus)="toggleStatusEmitted($event)">            
         </app-task>
     </div>
 </section>

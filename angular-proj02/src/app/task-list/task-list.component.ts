@@ -21,4 +21,14 @@ export class TaskListComponent implements OnInit {
     this.completedCount = this.tasks.filter(t => t.isComplete).length;
   }
 
+  toggleStatusEmitted(taskId:number){
+    let t = this.taskService.getTaskById(taskId);
+    if(t.isComplete){
+      this.taskService.unmarkComplete(taskId);
+    }else{
+      this.taskService.markComplete(taskId);
+    }
+    this.tasks = this.taskService.getTasks();
+    this.completedCount = this.tasks.filter(t => t.isComplete).length;
+  }
 }
