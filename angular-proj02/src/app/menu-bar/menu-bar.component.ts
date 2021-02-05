@@ -10,11 +10,11 @@ export class MenuBarComponent implements OnInit {
   links : string[][];
 
   constructor() { 
-    this.links = [
-      ["/","Home"],
+    this.links = [      
       ["/loan","Loan Form"],
       ["/pipes","Pipes Demo"],
-      ["/sddc","Strucural Directives Demo"]      
+      ["/sddc","Strucural Directives Demo"],
+      ["/tasks","Tasks"]      
     ];
   }
 

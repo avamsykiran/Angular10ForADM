@@ -9,12 +9,21 @@ import { BuiltInPipesComponent } from './built-in-pipes/built-in-pipes.component
 import { InWordsPipe } from './pipe/in-words.pipe';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { StructuralDirectivesDemoComponent } from './structural-directives-demo/structural-directives-demo.component';
+import { TaskManagerComponent } from './task-manager/task-manager.component';
+import { TaskListComponent } from './task-list/task-list.component';
+import { AddtaskComponent } from './addtask/addtask.component';
+import { TaskComponent } from './task/task.component';
 
 const routes : Routes = [
   {path:'',redirectTo:'/loan',pathMatch:'full'},
   {path:'loan',component:LoanFormComponent},
   {path:'pipes',component:BuiltInPipesComponent},
-  {path:'sddc',component:StructuralDirectivesDemoComponent}
+  {path:'sddc',component:StructuralDirectivesDemoComponent},
+  {path:'tasks',component:TaskManagerComponent,children:[
+    {path:'',redirectTo:'list',pathMatch:'full'},
+    {path:'list',component:TaskListComponent},
+    {path:'new',component:AddtaskComponent}
+  ]}
 ];
 
 @NgModule({
@@ -24,7 +33,11 @@ const routes : Routes = [
     BuiltInPipesComponent,
     InWordsPipe,
     MenuBarComponent,
-    StructuralDirectivesDemoComponent
+    StructuralDirectivesDemoComponent,
+    TaskManagerComponent,
+    TaskListComponent,
+    AddtaskComponent,
+    TaskComponent
   ],
   imports: [
     BrowserModule,

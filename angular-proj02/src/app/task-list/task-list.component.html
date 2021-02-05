@@ -1,0 +1,14 @@
+<section class="bg-info p-4">
+    <h3 class="mb-2">Tasks List</h3>
+
+    <div class="card  mb-2">
+        <div class="card-text p-2 text-center">
+            Completed Tasks: <strong>{{completedCount}} out of {{tasks.length}}</strong>
+        </div>
+    </div>
+
+    <div class="card-columns">
+        <app-task *ngFor="let t of tasks" [taskDetails]="t">            
+        </app-task>
+    </div>
+</section>
