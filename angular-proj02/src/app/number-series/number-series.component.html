@@ -1,0 +1,31 @@
+
+<div class="card p-4">
+
+    <div class="card-header">
+        
+        <form class="form-inline" (ngSubmit)="handleSubmit()">
+            <label class="form-label">Lower Limit</label>
+            <input type="number" class="form-control" name="lb" [(ngModel)]="lb"/>
+            <label class="form-label">Upper Limit</label>
+            <input type="number" class="form-control" name="ub" [(ngModel)]="ub"/>
+            <label class="form-check-label">
+                <input type="checkbox" name="ce" class="form-check-control"
+                [(ngModel)]="isEven"/>Evens
+            </label>
+            <label class="form-check-label">
+                <input type="checkbox" name="cs" class="form-check-control"
+                [(ngModel)]="isSqrd"/>Squard
+            </label>
+            <button class="btn btn-sm btn-primary" [disabled]="!isDone">
+                Generate
+            </button>
+        </form>
+
+    </div>
+    <div class="card-body" *ngIf="result">        
+        <span  *ngFor="let n of result">{{n}},</span>
+    </div>
+    <div class="card-body" *ngIf="errMsg">
+        <strong>{{errMsg}}</strong>    
+    </div>
+</div>

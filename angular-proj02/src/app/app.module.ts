@@ -13,6 +13,8 @@ import { TaskManagerComponent } from './task-manager/task-manager.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { AddtaskComponent } from './addtask/addtask.component';
 import { TaskComponent } from './task/task.component';
+import { NumberSeriesContainerComponent } from './number-series-container/number-series-container.component';
+import { NumberSeriesComponent } from './number-series/number-series.component';
 
 const routes : Routes = [
   {path:'',redirectTo:'/loan',pathMatch:'full'},
@@ -23,7 +25,8 @@ const routes : Routes = [
     {path:'',redirectTo:'list',pathMatch:'full'},
     {path:'list',component:TaskListComponent},
     {path:'new',component:AddtaskComponent}
-  ]}
+  ]},
+  {path:'obdemo',component:NumberSeriesContainerComponent}
 ];
 
 @NgModule({
@@ -37,7 +40,9 @@ const routes : Routes = [
     TaskManagerComponent,
     TaskListComponent,
     AddtaskComponent,
-    TaskComponent
+    TaskComponent,
+    NumberSeriesContainerComponent,
+    NumberSeriesComponent
   ],
   imports: [
     BrowserModule,

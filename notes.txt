@@ -308,8 +308,66 @@ RouterModule
 
 
 
+Promise
+--------------------------
+
+let job = (resolve,reject) =>{
+
+    .....asynchronous coding..
+    ...........................
+    resolve(data) //to indicate successfull completion
+
+    reject(error) //to indicate errsome abortion.
+
+}
+
+let p = new Promise(job);
+
+p.then(
+    (data)=> {   }, //is called on successfull completion
+    (error)=>{   }//is called on error.
+);
+
+
+RxJS    
+Observables
+--------------------------
+
+let job = (observer) =>{
+    
+    .......asynchronous coding.....
+
+    observer.next(data); //called whenever we need to send a pice of output
+    observer.error(err); //called to signal errsome abortion
+    observer.complete(); //compeltion successfully.
+
+};
+
+let ob = new Observable(job);
+
+ob.subscribe(
+    (data) => {},
+    (err) => {},
+    () => {}
+);
+
+
+Observable (RxJS) Operators
+-----------------
+
+ let ob2 = ob1.pipe(
+                map(function1)
+        );
+
+ob2 will return function(ele) where ele is each object returned by ob1.
+
 
         
+        filter
+        
+        reduce
+
+
 
 
 

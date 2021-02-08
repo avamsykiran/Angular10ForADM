@@ -1,0 +1,80 @@
+{
+  "depts": [
+    {
+      "id": 10,
+      "dname": "Accounts"
+    },
+    {
+      "id": 20,
+      "dname": "Sales"
+    },
+    {
+      "id": 30,
+      "dname": "Operations"
+    },
+    {
+      "id": 40,
+      "dname": "RnD"
+    },
+    {
+      "id": 50,
+      "dname": "Production"
+    }
+  ],
+  "emps": [
+    {
+      "id": 101,
+      "ename": "Vamsy",
+      "basic": 4500,
+      "deptno": 10
+    },
+    {
+      "id": 102,
+      "ename": "Varun",
+      "basic": 4500,
+      "deptno": 10
+    },
+    {
+      "id": 103,
+      "ename": "Vinay",
+      "basic": 4500,
+      "deptno": 20
+    },
+    {
+      "id": 104,
+      "ename": "Vimal",
+      "basic": 4500,
+      "deptno": 30
+    },
+    {
+      "id": 105,
+      "ename": "Vikas",
+      "basic": 4500,
+      "deptno": 20
+    },
+    {
+      "id": 106,
+      "ename": "Vasu",
+      "basic": 4500,
+      "deptno": 30
+    },
+    {
+      "id": 107,
+      "ename": "Vivek",
+      "basic": 4500,
+      "deptno": 40
+    },
+    {
+      "id": 108,
+      "ename": "Vindhya",
+      "basic": 4500,
+      "deptno": 10
+    },
+    {
+      "id": "109",     
+      "ename": "Suma",
+      "basic": 4500,
+      "deptno": 50
+    }
+  ]
+}
