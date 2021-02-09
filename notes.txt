@@ -360,13 +360,15 @@ Observable (RxJS) Operators
         );
 
 ob2 will return function(ele) where ele is each object returned by ob1.
-
-
         
         filter
-        
-        reduce
 
+Router Gaurds
+------------------------------
+
+        CanActive       
+        CanChildActive
+        CanDeactive
 
 
 
