@@ -25,9 +25,9 @@ export class MenuBarComponent implements OnInit {
       let role = this.userService.currentUser().role;
       if(role=="ADMIN"){
         this.links=[
-          ["/","Home"],
-          ["/","Courses"],
-          ["/","Add Course"]
+          ["/admin","Home"],
+          ["/admin/courses","Courses"],
+          ["/admin/addCourse","Add Course"]
         ];
       }else{
         this.links=[

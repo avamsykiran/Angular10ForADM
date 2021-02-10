@@ -1,0 +1,8 @@
+<div class="col-sm-8 mx-auto m-2">
+    <div [class]="{card:true,'bg-info':(type=='info'),'bg-danger':(type=='danger'),'text-light':(type=='danger')}">
+        <div class="card-text p-3 text-center">
+            <ng-content>                
+            </ng-content>
+        </div>
+    </div>
+</div>

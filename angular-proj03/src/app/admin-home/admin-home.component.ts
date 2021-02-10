@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-admin-home',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminHomeComponent implements OnInit {
 
-  constructor() { }
+  infoMsg:string;
+  errMsg:string;
+  constructor(private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.activatedRoute.queryParams.subscribe(
+      (qryPrms) => {
+        if(qryPrms.err){
+          this.errMsg=qryPrms.err;
+        }
+        if(qryPrms.info){
+          this.infoMsg=qryPrms.info;
+        }
+      }
+    );
   }
 
 }

@@ -370,6 +370,18 @@ Router Gaurds
         CanChildActive
         CanDeactive
 
+HttpClientModule
+-----------------------------------------------
+
+        HttpClient
+
+                get(url):Observable
+                put(url,requestBody):Observable
+                post(url,requestBody):Observable
+                delete(url):Observable
+
+        
+
 
 
 

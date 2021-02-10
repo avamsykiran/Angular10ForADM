@@ -1,4 +1,12 @@
 <app-menu-bar></app-menu-bar>
 <section class="container-fluid p-4">
-  
+
+    <app-msg-box type="info" *ngIf="infoMsg">
+        <strong>{{infoMsg}}</strong>
+    </app-msg-box>
+    <app-msg-box type="danger" *ngIf="errMsg">
+        <strong>{{errMsg}}</strong>
+    </app-msg-box>
+
+    <router-outlet></router-outlet>
 </section>

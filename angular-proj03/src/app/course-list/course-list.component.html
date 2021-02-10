@@ -1,0 +1,24 @@
+<h3>Courses</h3>
+
+<app-msg-box type="info" *ngIf="!errMsg && !courses">
+    <strong>Please wait while we load data...</strong>
+</app-msg-box>
+
+<app-msg-box type="danger" *ngIf="errMsg">
+    <strong>{{errMsg}}</strong>
+</app-msg-box>
+
+<table class="table table-bordered table-striped" *ngIf="courses">
+    <thead>
+        <th>Course#</th>
+        <th>Title</th>
+        <th>Duration (in hours)</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of courses">
+            <td>{{c.id|number:'3.0-0'}}</td>
+            <td>{{c.title|uppercase}}</td>
+            <td>{{c.durationInHours}}</td>
+        </tr>
+    </tbody>
+</table>

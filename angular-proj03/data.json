@@ -1,20 +1,28 @@
 {
-    "courses" :[
-        {
-            "id":1,
-            "title":"Java FSD",
-            "durationInHours":120
-        },
-        {
-            "id":2,
-            "title":".Net FSD",
-            "durationInHours":120
-        },
-        {
-            "id":3,
-            "title":"MEAN FSD",
-            "durationInHours":120
-        }
-    ],
-    "students":[]    
+  "courses": [
+    {
+      "id": 1,
+      "title": "Java FSD",
+      "durationInHours": 120
+    },
+    {
+      "id": 2,
+      "title": ".Net FSD",
+      "durationInHours": 120
+    },
+    {
+      "id": 3,
+      "title": "MEAN FSD",
+      "durationInHours": 120
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5,
+      "title": "abcdefgh",
+      "durationInHours": 5
+    }
+  ],
+  "students": []
 }

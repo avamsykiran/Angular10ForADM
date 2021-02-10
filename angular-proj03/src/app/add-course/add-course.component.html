@@ -1,0 +1,28 @@
+<div class="col-sm-5 mx-auto">
+    <form (ngSubmit)="onFormSubmit()">
+        <div class="form-group">
+            <label class="form-label">
+                Course Id:
+            </label>
+            <input type="number" name="cid" [(ngModel)]="course.id" 
+            required min="1" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label class="form-label">
+                Title:
+            </label>
+            <input type="text" name="title" [(ngModel)]="course.title" 
+            required class="form-control" />
+        </div>
+        <div class="form-group">
+            <label class="form-label">
+                Duration (in hours):
+            </label>
+            <input type="number" name="dur" [(ngModel)]="course.durationInHours" 
+            required min="1" class="form-control" />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-block btn-primary">ADD COURSE</button>
+        </div>
+    </form>
+</div>
