@@ -22,7 +22,18 @@
       "id": 5,
       "title": "abcdefgh",
       "durationInHours": 5
+    },
+    {
+      "id": 6,
+      "title": "",
+      "durationInHours": 0
     }
   ],
-  "students": []
+  "students": [
+    {
+      "id": 1,
+      "fullName": "Vamsy Kiran",
+      "mobileNumber": "9052224753"
+    }
+  ]
 }

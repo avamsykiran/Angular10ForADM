@@ -1,10 +1,10 @@
 <app-menu-bar></app-menu-bar>
 <section class="container-fluid p-4">
 
-    <app-msg-box type="info" *ngIf="infoMsg">
+    <app-msg-box type="info" *ngIf="infoMsg" (closeClicked)="closeInfoMsgBox()">
         <strong>{{infoMsg}}</strong>
     </app-msg-box>
-    <app-msg-box type="danger" *ngIf="errMsg">
+    <app-msg-box type="danger" *ngIf="errMsg" (closeClicked)="closeErrMsgBox()">
         <strong>{{errMsg}}</strong>
     </app-msg-box>
 

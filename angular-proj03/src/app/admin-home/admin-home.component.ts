@@ -25,4 +25,11 @@ export class AdminHomeComponent implements OnInit {
     );
   }
 
+  closeInfoMsgBox(){
+    this.infoMsg=null;    
+  }
+
+  closeErrMsgBox(){    
+    this.errMsg=null;
+  }
 }

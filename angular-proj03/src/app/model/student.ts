@@ -6,3 +6,4 @@ export class Student {
     mobileNumber:string;
     enrollments:Enrollment[];
 }
+

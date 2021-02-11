@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ExecSyncOptionsWithStringEncoding } from 'child_process';
 import { User } from '../model/user';
+import { StudentService } from '../service/student.service';
 import { UserService } from '../service/user.service';
 
 @Component({
@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private userService:UserService,
+    private studentService:StudentService,
     private router:Router,
     private activatedRoute:ActivatedRoute) {
 
@@ -36,19 +37,22 @@ export class LoginComponent implements OnInit {
   }
 
   handleSubmit(){
-    let user:User=null;
-    let nextPage:string=null;
+    let uid = this.userId.toLowerCase();
 
-    if(this.userId.toLowerCase()=="admin"){
-      user={userId:this.userId,role:"ADMIN"};
-      nextPage="/admin";
+    if(uid=="admin"){          
+      this.userService.login({userId:this.userId,role:"ADMIN"});
+      this.router.navigateByUrl("/admin");
     }else{
-      user={userId:this.userId,role:"STUDENT"};
-      nextPage="/student";
+      this.studentService.getById(parseInt(uid)).subscribe(
+        (student) => {
+          this.userService.login({userId:uid,role:"STUDENT"});
+          this.router.navigateByUrl("/student");
+        },
+        (err) =>{
+          this.errMsg=err;
+        }
+      );
     }
-
-    this.userService.login(user);
-    this.router.navigateByUrl(nextPage);
   }
 
 }

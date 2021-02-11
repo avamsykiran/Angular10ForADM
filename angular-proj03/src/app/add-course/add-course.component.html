@@ -1,28 +1,42 @@
 <div class="col-sm-5 mx-auto">
-    <form (ngSubmit)="onFormSubmit()">
+    <form (ngSubmit)="onFormSubmit()" #f=ngForm>
         <div class="form-group">
             <label class="form-label">
                 Course Id:
             </label>
-            <input type="number" name="cid" [(ngModel)]="course.id" 
-            required min="1" class="form-control" />
+            <input type="number" name="cid" [(ngModel)]="course.id" required min="1" class="form-control"
+                #cid=ngModel />
+            <ol class="alert alert-danger" *ngIf="cid.invalid && (cid.dirty || cid.touched)">
+                <li *ngIf="cid.errors.required"> Id is mandate</li>
+                <li *ngIf="cid.errors.min"> it is a non-zero postive number</li>
+            </ol>
         </div>
         <div class="form-group">
             <label class="form-label">
                 Title:
             </label>
-            <input type="text" name="title" [(ngModel)]="course.title" 
-            required class="form-control" />
+            <input type="text" name="title" [(ngModel)]="course.title" required minlength="4" class="form-control"
+                #title=ngModel />
+            <ol class="alert alert-danger" *ngIf="title.invalid && (title.dirty || title.touched)">
+                <li *ngIf="title.errors.required"> title is mandate</li>
+                <li *ngIf="title.errors.minlength"> title is expected to be atleast 4 chars in length</li>
+            </ol>
         </div>
         <div class="form-group">
             <label class="form-label">
                 Duration (in hours):
             </label>
-            <input type="number" name="dur" [(ngModel)]="course.durationInHours" 
-            required min="1" class="form-control" />
+            <input type="number" name="dur" [(ngModel)]="course.durationInHours" required min="1" class="form-control"
+                #dur=ngModel />
+            <ol class="alert alert-danger" *ngIf="dur.invalid && (dur.dirty || dur.touched)">
+                <li *ngIf="dur.errors.required"> This field is mandate</li>
+                <li *ngIf="dur.errors.min"> a non-zero postive number expected in this field</li>
+            </ol>
         </div>
         <div class="form-group">
-            <button class="btn btn-block btn-primary">ADD COURSE</button>
+            <button class="btn btn-block btn-primary" [disabled]="f.invalid">
+                ADD COURSE
+            </button>
         </div>
     </form>
 </div>

@@ -380,9 +380,24 @@ HttpClientModule
                 post(url,requestBody):Observable
                 delete(url):Observable
 
-        
+Angular Forms
+-----------------------------        
 
+Template Driven Forms
 
+        HTML 5 Form in teh tmeplate     
+        Bind each form control with a field or property
 
+        not easily testable
+        can not sustain completed forms.
+        validations are not under the control on controller.
 
+Model Driven Form (Rewactive Forms)
+
+        The Form is constructed in the controller
+        And the constructed from is bound to html5
+
+        easily testable
+        sustain dynamic model changes as they are in the 
+        control of the controller not the template.
 

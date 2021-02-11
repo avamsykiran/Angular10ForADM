@@ -17,7 +17,7 @@ export class AuthGuard implements CanActivate, CanActivateChild {
   isAllowed(url:string){
     let allowed=false;
     
-    if(url.indexOf("/login")>-1){
+    if(url.indexOf("/login")>-1 || url.indexOf("/signup")>-1){
       if(!this.userService.isLoggedIn()){
         allowed=true;
       }

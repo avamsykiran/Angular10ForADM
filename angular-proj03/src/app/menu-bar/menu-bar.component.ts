@@ -31,16 +31,16 @@ export class MenuBarComponent implements OnInit {
         ];
       }else{
         this.links=[
-          ["/","Home"],
-          ["/","Courses"],
-          ["/","Enrollments"],
-          ["/","Profile"]
+          ["/student","Home"],
+          ["/student/courses","Courses"],
+          ["/student/enrolls","Enrollments"],
+          ["/student/edit","Profile"]
         ];
       }
     }else{
       this.links=[
         ["/","Home"],
-        ["/signUp","Sign Up"]
+        ["/signup","Sign Up"]
       ];
     }
   }

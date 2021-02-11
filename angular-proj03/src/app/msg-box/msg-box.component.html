@@ -3,6 +3,10 @@
         <div class="card-text p-3 text-center">
             <ng-content>                
             </ng-content>
+            <button class="btn btn-sm btn-danger" 
+                (click)="closeClicked.emit()">
+                <i class="fa fa-close"></i>
+            </button>
         </div>
     </div>
 </div>
