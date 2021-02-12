@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Enrollment } from '../model/enrollment';
+import { StudentService } from '../service/student.service';
+import { UserService } from '../service/user.service';
 
 @Component({
   selector: 'app-enrollments',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EnrollmentsComponent implements OnInit {
 
-  constructor() { }
+  enrollments:Enrollment[];
+
+  constructor(
+    private studentService:StudentService,
+    private userService:UserService
+  ) { }
 
   ngOnInit(): void {
+    let uid = this.userService.currentUser().userId;
+
+    this.studentService.getById(parseInt(uid)).subscribe(
+      (student) =>{
+        this.enrollments=student.enrollments;
+      }
+    );
   }
 
 }

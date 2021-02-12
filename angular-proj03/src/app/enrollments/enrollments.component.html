@@ -1,1 +1,18 @@
-<p>enrollments works!</p>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Enrollment#</th>
+            <th>CourseId</th>
+            <th>Course Name</th>
+            <th>Date of Enrollment</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of enrollments">
+            <td>{{e.id}}</td>
+            <td>{{e.courseId}}</td>
+            <td>{{e.courseId|courseName|async}}</td>
+            <td>{{e.dateOfEnrollment|date:'dd-MMM-yyyy'}}</td>
+        </tr>
+    </tbody>
+</table>

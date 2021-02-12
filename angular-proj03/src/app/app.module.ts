@@ -16,6 +16,7 @@ import { AddCourseComponent } from './add-course/add-course.component';
 import { StudentFormComponent } from './student-form/student-form.component';
 import { StudentDashBoardComponent } from './student-dash-board/student-dash-board.component';
 import { EnrollmentsComponent } from './enrollments/enrollments.component';
+import { CourseNamePipe } from './course-name.pipe';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { EnrollmentsComponent } from './enrollments/enrollments.component';
     AddCourseComponent,
     StudentFormComponent,
     StudentDashBoardComponent,
-    EnrollmentsComponent
+    EnrollmentsComponent,
+    CourseNamePipe
   ],
   imports: [
     BrowserModule,
