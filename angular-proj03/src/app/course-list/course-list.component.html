@@ -4,6 +4,10 @@
     <strong>Please wait while we load data...</strong>
 </app-msg-box>
 
+<app-msg-box type="info" *ngIf="infoMsg">
+    <strong>{{infoMsg}}</strong>
+</app-msg-box>
+
 <app-msg-box type="danger" *ngIf="errMsg">
     <strong>{{errMsg}}</strong>
 </app-msg-box>
@@ -13,12 +17,19 @@
         <th>Course#</th>
         <th>Title</th>
         <th>Duration (in hours)</th>
+        <th *ngIf="showActions">Action</th>
     </thead>
     <tbody>
         <tr *ngFor="let c of courses">
             <td>{{c.id|number:'3.0-0'}}</td>
             <td>{{c.title|uppercase}}</td>
             <td>{{c.durationInHours}}</td>
+            <td *ngIf="showActions">
+                <button class="btn btn-sm btn-secondary" 
+                    (click)="enroll(c.id)">
+                    <i class="fa fa-link"> Enroll</i>
+                </button>
+            </td>
         </tr>
     </tbody>
 </table>

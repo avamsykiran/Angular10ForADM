@@ -16,24 +16,30 @@
       "durationInHours": 120
     },
     {
-      "id": 4
-    },
-    {
       "id": 5,
       "title": "abcdefgh",
       "durationInHours": 5
-    },
-    {
-      "id": 6,
-      "title": "",
-      "durationInHours": 0
     }
   ],
   "students": [
     {
       "id": 1,
       "fullName": "Vamsy Kiran",
-      "mobileNumber": "9052224753"
+      "mobileNumber": "9052224753",
+      "enrollments": [
+        {
+          "id": 1,
+          "courseId": 2,
+          "studentId": 1,
+          "dateOfEnrollment": "2021-02-12T08:56:17.491Z"
+        },
+        {
+          "id": 2,
+          "courseId": 3,
+          "studentId": 1,
+          "dateOfEnrollment": "2021-02-12T08:56:37.690Z"
+        }
+      ]
     }
   ]
 }
