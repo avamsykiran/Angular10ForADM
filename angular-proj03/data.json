@@ -32,14 +32,13 @@
           "courseId": 2,
           "studentId": 1,
           "dateOfEnrollment": "2021-02-12T08:56:17.491Z"
-        },
-        {
-          "id": 2,
-          "courseId": 3,
-          "studentId": 1,
-          "dateOfEnrollment": "2021-02-12T08:56:37.690Z"
         }
       ]
+    },
+    {
+      "id": 2,
+      "fullName": "Srinu",
+      "mobileNumber": "9948016007"
     }
   ]
 }

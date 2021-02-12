@@ -1,6 +1,14 @@
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
+            <th colspan="5">
+                <button class="btn btn-sm btn-danger" (click)="discardSelected()">
+                    <i class="fa fa-trash"></i> Discard Selected Enrollments
+                </button>
+            </th>
+        </tr>
+        <tr>
+            <th></th>
             <th>Enrollment#</th>
             <th>CourseId</th>
             <th>Course Name</th>
@@ -8,11 +16,13 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let e of enrollments">
-            <td>{{e.id}}</td>
-            <td>{{e.courseId}}</td>
-            <td>{{e.courseId|courseName|async}}</td>
-            <td>{{e.dateOfEnrollment|date:'dd-MMM-yyyy'}}</td>
+        <tr *ngFor="let e of enrollViews" (click)="toggleSelection(e)" >
+            <td><input type="checkbox" 
+                [(ngModel)]="e.isSelected" /></td>
+            <td>{{e.enrollment.id}}</td>
+            <td>{{e.enrollment.courseId}}</td>
+            <td>{{e.enrollment.courseId|courseName|async}}</td>
+            <td>{{e.enrollment.dateOfEnrollment|date:'dd-MMM-yyyy'}}</td>
         </tr>
-    </tbody>
+    </tbody>    
 </table>
