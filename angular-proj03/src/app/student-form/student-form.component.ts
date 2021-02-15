@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Enrollment } from '../model/enrollment';
 import { Student } from '../model/student';
 import { StudentService } from '../service/student.service';
 import { UserService } from '../service/user.service';
@@ -19,6 +20,8 @@ export class StudentFormComponent implements OnInit {
   studentForm: FormGroup;
 
   isEditing: boolean;
+
+  student:Student; //incase of editing..!
 
   constructor(
     private userService:UserService,
@@ -48,14 +51,17 @@ export class StudentFormComponent implements OnInit {
       this.studentService.getById(uid).subscribe(
         (student) => {
           this.studentForm.setValue(student);
+          this.student=student;
         }
       );
     }
   }
 
   handleSubmit() {
-    let student = this.studentForm.value;
+    let student = this.studentForm.value;    
+
     if(this.isEditing){
+      student.enrollments = this.student.enrollments;
       this.modify(student);
     }else{
       this.add(student);
@@ -74,7 +80,7 @@ export class StudentFormComponent implements OnInit {
   }
 
   modify(student:Student){
-    this.studentService.modify(student,student.id).subscribe(
+   this.studentService.modify(student,student.id).subscribe(
       (student) => {
         this.router.navigate(["/student/dashboard"], { queryParams: { info: `Profile update successfully` } });
       },
